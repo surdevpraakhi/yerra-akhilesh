@@ -1,0 +1,186 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Applications of Derivatives}
+\author{ee24btech11066 - Akhilesh}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item For $x \in \brak{0,\frac{5\pi}{2}}$, define $f(x)=\int\limits_0^x\sqrt{t}\sin t dt$.Then $f$ has \hfill{[2011]}\\
+\begin{enumerate}
+    \item   local minimum at $\pi$ and $2\pi$\\
+    \item   local minimum at $\pi$ and local maximum at $2\pi$
+    \item   local minimum at $\pi$ and local maximum at $2\pi$
+    \item   local maximum at $\pi$ and $2\pi$\\
+\end{enumerate}
+    
+\item A spherical balloon is filled with $4500\pi$ cubic meters of helium gas. If a leak in the balloon causes the gas to escape at the rate of $72\pi$ cubic meters per minute,then the rate{(in meters per minute)} at which the radius of the balloon decreases $49$ minutes after the leakage began is : \hfill{[2012]}\\
+\begin{enumerate}
+    \item   $\frac{9}{7}$\\
+    \item   $\frac{7}{9}$\\
+    \item   $\frac{2}{9}$\\
+    \item   $\frac{9}{2}$\\
+\end{enumerate} 
+
+\item Let $a,b\in \mathbb R$ be such that the function $f$ given by $f(x)=ln\abs{x}+bx^{2}+ax$ , $x \neq 0$ has extreme values at $x=-1$ and $x=2$\\
+Statement-1 : $f$ has local maximum at $x=-1$ and at $x=2$.\\
+Statement-2 : $a=\frac{1}{2}$ and $b=\frac{-1}{4}$ \hfill{[2012]}\\
+\begin{enumerate}
+    \item Statement-1 is false,Statement-2 is true.\\
+    \item Statement-1 is true,Statement-2 is true;statement-2 is a correct explanation for Statement-1.\\
+    \item Statement-1 is true,statement-2 is true;statement-2 is not a correct explanation for Statement-1\\.
+    \item Statement-1 is true,statement-2 is false.\\
+\end{enumerate}
+
+\item A line is drawn through the point\brak{1,2} to meet the coordinate axes at $P$ and $Q$ such that it forms a triangle $OPQ$, where O is the origin.If the area of the triangle $OPQ$ is least,then the slope of the line $PQ$ is: \hfill{[2012]}\\
+\begin{enumerate}
+    \item  $\frac{-1}{4}$\\
+    \item  -4\\
+    \item  -2\\
+    \item  $\frac{-1}{2}$\\
+\end{enumerate}
+\item The intercepts on $x-$axis made by tangents to the curve, $y=\int\limits_0^x\abs{t}dt,x\in R$,which are parallel to the line $y=2x,$ are equal to : {[JEE M 2013]}\\
+\begin{enumerate}
+    \item  $\pm1$\\
+    \item  $\pm2$\\
+    \item  $\pm3$\\
+    \item  $\pm4$\\
+    
+\end{enumerate}
+
+\item If $f$ and $g$ are differentiable functions in ${[0,1]}$ satisfying $f\brak{0}=2=g\brak{1},g\brak{0} and f\brak{1}=6$,then for some c$\in {[0,1]}$\hfill[JEE M 2014]
+\begin{enumerate}
+    \item  $f'\brak{c}=g'\brak{c}$\\
+    \item  $f'\brak{c}=2g'\brak{c}$\\
+    \item  $2f'\brak{c}=g'\brak{c}$\\
+    \item  $2f'\brak{c}=3g'\brak{c}$\\
+\end{enumerate}
+\item Let $f(x)$ be a polynomial of degree four having extreme values at $x=1$ and $x=2$.If $\lim\limits_{x\to 0}$ $\brak{1+\frac{f(x)}{x^{2}}}=3$ ,then $f\brak{2}$ is equal to :
+
+    \hfill[JEE M 2015]\\
+\begin{enumerate}
+    \item  0\\
+    \item  4\\
+    \item -8\\
+    \item -4\\
+\end{enumerate}    
+\item Consider $:$\\
+     $f(x)=\tan^{-1}\brak{ \sqrt{\frac{1+\sin{x}}{1-\sin{x}} }}$,$x \in \brak{0,\frac{\pi}{2}}$.
+A normal to $y=f(x)$ at $x=\frac{\pi}{6}$ also passes through the point :
+
+\hfill[JEE M 2016]\\
+\begin{enumerate}
+    \item  $\brak{\frac{\pi}{6},0}$\\
+    \item  $\brak{\frac{\pi}{4},0}$\\
+    \item  $\brak{0,0}$\\
+    \item  $\brak{\frac{2\pi}{3}}$\\
+\end{enumerate}
+\item A wire of length $2$ units is cut into two parts which are bent respectively to form a square of side=x units and a circle of radius=r units.If the sum of the areas of the square and the circle so formed is minimum,then:
+
+\hfill[JEE M 2016]\\
+\begin{enumerate}
+    \item  $x=2r$\\
+    \item  $2x=r$\\
+    \item  $2x=\brak{\pi+4r}$\\
+    \item  $\brak{4-\pi}x=\pi r$\\
+\end{enumerate}
+\item The function $f : R\rightarrow {\brak{\frac{-1}{2},\frac{1}{2}}}$ defined as $f(x)=\frac{x}{1+x^2}$,is :
+
+\hfill[JEE M 2016]\\
+\begin{enumerate}
+    \item  neither injective nor surjective\\
+    \item  invertible\\
+    \item  injective but not surjective\\
+    \item  surjective but not injective\\
+\end{enumerate}
+\item The normal to the curve $y\brak{x-2}\brak{x-3}=x+6$ at the point where the curve intersects the $y$-axis passes through the point : \hfill[JEE M 2017]
+\begin{enumerate}
+    \item  $\brak{\frac{1}{2},\frac{1}{3}}$\\
+    \item  $\brak{\frac{-1}{2},\frac{-1}{2}}$\\
+    \item  $\brak{\frac{1}{2},\frac{1}{2}}$\\
+    \item  $\brak{\frac{1}{2},\frac{-1}{3}}$\\
+\end{enumerate}
+\item Twenty meters of wire is available for fencing off a flower-bed in the form of a circular sector.Then the maximum area\brak{in sq.m} of the flower-bed, is:\hfill[JEE M 2017]\\
+\begin{enumerate}
+    \item  30\\
+    \item  12.5\\
+    \item  10\\
+    \item  25\\
+\end{enumerate}
+\item The eccentricity of an ellipse whose centre is at the origin is $\frac{1}{2}$.If one of its directices is x=-4,then the equation of the normal to it at $\brak{1,\frac{3}{2}}$ is :\hfill[JEE M 2017]\\
+\begin{enumerate}
+    \item  $x+2y=4$\\
+    \item  $2y-x=2$\\
+    \item  $4x-2y=1$\\
+    \item  $4x+2y=7$\\
+\end{enumerate}
+\item Let $f(x)=x^{2}+\frac{1}{x^2}$ and $g(x)=x-\frac{1}{x}$,$x \in R-{\{-1,0,1}\}$.If $h(x)=\frac{f(x)}{g(x)}$,then the local minimum value of $h(x)$ is:\hfill[JEE M 2018]\\
+\begin{enumerate}
+    \item  -3\\
+    \item  -2$\sqrt{2}$\\
+    \item   2$\sqrt{2}$\\
+    \item   3\\
+\end{enumerate}
+\item If the curves $y^2=6x,9x^2+by^2=16$ intersect each other at right angles,then the value of b is:\hfill[JEE M 2018]\\
+\begin{enumerate}
+    \item  $\frac{7}{2}$\\
+    \item  4\\
+    \item  $\frac{9}{2}$\\
+    \item  6\\
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
