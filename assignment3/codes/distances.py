@@ -70,8 +70,10 @@ ax.spines['top'].set_color('none')
 ax.spines['left'].set_position('zero')
 ax.spines['right'].set_color('none')
 ax.spines['bottom'].set_position('zero')
-
+ax.set_xlabel('X axis')
+ax.set_ylabel('Y axis')
 # Show grid and legend
+ax.set_title("Q is Equidistant from P and R")
 plt.legend(loc='best')
 plt.grid()  # minor
 plt.show()
