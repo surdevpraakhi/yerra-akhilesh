@@ -17,8 +17,6 @@ from conics.funcs import circ_gen
 from line.funcs import *
 
 # if using termux
-import subprocess
-import shlex
 
 # Define points P and R
 P = np.array([5, -3]).reshape(-1, 1)  # Point P (5, -3)
@@ -43,16 +41,12 @@ print(Q, r)  # Print the center and radius
 # Generating circle points
 x_circ = circ_gen(Q, r)
 
-# Generating lines
-k1 = -2
-k2 = 0
-x_A = line_norm(n, c, k1, k2)
+# Plotting the circle
+plt.plot(x_circ[0, :], x_circ[1, :], label='$Circle$', color='blue')  # Plot circle
 
-# Plotting all lines and circles
-plt.plot(x_A[0, :], x_A[1, :], label='$(4 \quad 5)\mathbf{x}=5$')  # Plot line
-plt.plot(x_circ[0, :], x_circ[1, :], label='$Circle$')  # Plot circle
-
+# Colors for points
 colors = np.arange(1, 4)
+
 # Labeling the coordinates
 tri_coords = np.block([P, R, Q])  # Create block matrix for coordinates
 plt.scatter(tri_coords[0, :], tri_coords[1, :], c=colors)
@@ -64,6 +58,10 @@ for i, txt in enumerate(vert_labels):
                  xytext=(-20, 5),  # distance from text to points (x, y)
                  ha='center')  # horizontal alignment
 
+# Add lines connecting points P, Q, and R
+plt.plot([P[0, 0], Q[0, 0]], [P[1, 0], Q[1, 0]], 'r--', label='$PQ$')  # Line joining P and Q
+plt.plot([Q[0, 0], R[0, 0]], [Q[1, 0], R[1, 0]], 'g--', label='$QR$')  # Line joining Q and R
+
 # Set axes styles and position
 ax = plt.gca()
 ax.spines['top'].set_color('none')
@@ -72,8 +70,12 @@ ax.spines['right'].set_color('none')
 ax.spines['bottom'].set_position('zero')
 ax.set_xlabel('X axis')
 ax.set_ylabel('Y axis')
+
+# Set equal aspect ratio so the circle isn't distorted
+ax.set_aspect('equal')
+
 # Show grid and legend
-ax.set_title("Q is Equidistant from P and R")
+ax.set_title("Lines PQ and QR with Circle")
 plt.legend(loc='best')
 plt.grid()  # minor
 plt.show()
