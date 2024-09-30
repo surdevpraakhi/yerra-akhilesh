@@ -1,55 +1,67 @@
-# Code by GVV Sharma
-# December 7, 2019
-# Revised July 15, 2020
-# Revised October 21, 2023
-# Released under GNU GPL
+#Code by GVV Sharma
+#September 12, 2023
+#Revised July 21, 2024
+#released under GNU GPL
+#Point Vectors
 
+import sys                                          #for path to external scripts
+sys.path.insert(0, '/home/yerra/Desktop/assignments/matgeo/codes/CoordGeo')        #path to my scripts
 import numpy as np
+import numpy.linalg as LA
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+from mpl_toolkits.mplot3d import Axes3D
 
-# Function to plot a line segment between two points
-def plot_line(A, B):
-    x_vals = [A[0], B[0]]
-    y_vals = [A[1], B[1]]
-    plt.plot(x_vals, y_vals, 'bo-', markersize=8)  # Plot with blue dots and lines
+#local imports
+from line.funcs import *
+from triangle.funcs import *
+from conics.funcs import circ_gen
 
-# Labeling points with coordinates
-def label_pts_with_coords(G_v, vert_labels): 
-    for i, txt in enumerate(vert_labels):
-        plt.annotate(f'{txt} ({G_v[0, i]:.1f}, {G_v[1, i]:.1f})',  # Add coordinates
-                     (G_v[0, i], G_v[1, i]),  # this is the point to label
-                     textcoords="offset points",  # how to position the text
-                     xytext=(10, 10),  # distance from text to points (x,y)
-                     ha='center', fontsize=12, color='blue')  # label style
+#if using termux
+import subprocess
+import shlex
+#end if
 
-# Defining rectangle vertices
-A = np.array([0, 0])    # Vertex A at the origin
-B = np.array([5, 0])    # Vertex B at (5, 0) (side length 5cm)
-C = np.array([5, 3.5])  # Vertex C at (5, 3.5) (side length 3.5cm from B to C)
-D = np.array([0, 3.5])  # Vertex D at (0, 3.5)
+# Given points
+A = np.array(([0, 3.5, 0])).reshape(-1, 1) 
+B = np.array(([5, 3.5, 0])).reshape(-1, 1)  
+C = np.array(([5, 0, 0])).reshape(-1, 1)  
+D = np.array(([0, 0, 0])).reshape(-1, 1)  # Additional point D
 
-# Combine the points into a single matrix for easy plotting and labeling
-G_v = np.array([A, B, C, D]).T
+# Create a figure and a 3D Axes
+fig = plt.figure(figsize=(8, 6))
+ax = fig.add_subplot(111, projection='3d')
 
-# Plot the rectangle without distance labels
-plot_line(A, B)  # Side AB
-plot_line(B, C)  # Side BC
-plot_line(C, D)  # Side CD
-plot_line(D, A)  # Side DA
+# Generating lines between points
+x_AB = line_gen(A, B)
+x_BC = line_gen(B, C)
+x_CD = line_gen(C, D)
+x_DA = line_gen(D, A)
 
-# Label vertices with their coordinates
+# Plotting all lines
+ax.plot(x_AB[0, :], x_AB[1, :], x_AB[2, :], label='$AB$', color='blue')
+ax.plot(x_BC[0, :], x_BC[1, :], x_BC[2, :], label='$BC$', color='orange')
+ax.plot(x_CD[0, :], x_CD[1, :], x_CD[2, :], label='$CD$', color='green')
+ax.plot(x_DA[0, :], x_DA[1, :], x_DA[2, :], label='$DA$', color='red')
+
+# Scatter plot
+colors = np.arange(1, 5)  # Updated colors for four points
+tri_coords = np.block([A, B, C, D])  # Stack A, B, C, D vertically
+ax.scatter(tri_coords[0, :], tri_coords[1, :], tri_coords[2, :], c=colors)
 vert_labels = ['A', 'B', 'C', 'D']
-label_pts_with_coords(G_v, vert_labels)
 
-# Set the limits for the plot for better visibility
-plt.xlim(-1, 6)
-plt.ylim(-1, 5)
+for i, txt in enumerate(vert_labels):
+    # Annotate each point with its label and coordinates
+    ax.text(tri_coords[0, i], tri_coords[1, i], tri_coords[2, i],
+            f'{txt}\n({tri_coords[0, i]:.1f}, {tri_coords[1, i]:.1f}, {tri_coords[2, i]:.1f})',
+            fontsize=12, ha='center', va='bottom')
 
-# Adding grid, axis equal for proportionate scaling
-plt.grid()
-plt.gca().set_aspect('equal', adjustable='box')
-plt.title('Rectangle with sides 5cm and 3.5cm', fontsize=16)
+ax.spines['top'].set_color('none')
+ax.spines['left'].set_position('zero')
+ax.spines['right'].set_color('none')
+ax.spines['bottom'].set_position('zero')
 
-# Show the plot
+plt.grid()  # minor
+plt.legend(loc='best')
 plt.show()
 
