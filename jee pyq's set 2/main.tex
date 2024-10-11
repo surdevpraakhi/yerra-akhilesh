@@ -1,0 +1,132 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{january 27th shift1 2024}
+\author{EE24BTECH11066 - YERRA AKHILESH
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[start=16]
+\item The portion of the line $4x+5y=20$ in the first quadrant is trisected by the lines $L_1$ and $L_2$ passing through the origin. The tangent of an angle between the lines $L_1$ and $L_2$ is :
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\frac{8}{5}$
+\item $\frac{25}{41}$
+\item $\frac{2}{5}$
+\item $\frac{30}{41}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $\bar{a} = \hat{i} + 2\hat{j} + \hat{k}$, $\bar{b} = 3\brak{\hat{i} - \hat{j} + \hat{k}}$. Let $\bar{c}$ be the vector such that $\bar{a} \times \bar{c}=\bar{b}$ and $\bar{a} \cdot \bar{c}=3$. Then $\bar{a} \cdot \brak{\brak{\bar{c} \times \bar{b}}-\bar{b}-\bar{c}}$ is equal to :
+\begin{enumerate}
+\begin{multicols}{4}
+\item 32
+\item 24
+\item 20
+\item 36
+\end{multicols}
+\end{enumerate}
+
+\item If $a=\lim\limits_{x\to 0}\frac{\sqrt{1+\sqrt{1+x^4}}-\sqrt{2}}{x^4}$ and $b=\lim\limits_{x\to 0}\frac{\sin^2{x}}{\sqrt{2}-\sqrt{1+\cos x}}$, then the value of $ab^{3}$ is : 
+\begin{enumerate}
+\begin{multicols}{4}
+\item 36
+\item 32
+\item 25
+\item 30
+\end{multicols}
+\end{enumerate}
+
+\item Consider the matrix $f(x)=\myvec { \cos x& -\sin x &0\\\sin x &\cos x&0\\ 0&0&1}$. Given below are two statements :\\
+Statement 1:$f(-x)$ is the inverse of the matrix $f(x)$.\\
+Statement 2:$f(x)f(y)=f(x+y)$.\\
+
+In the light of the above statements, choose the correct answer from the options given below
+\begin{enumerate}
+    \item Statement 1 is false but Statement 2 is true
+    \item Both Statement 1 and Statement 2 are false
+    \item Statement 1 is true but Statement 2 is false
+    \item Both Statement 1 and Statement 2 are true
+\end{enumerate}
+
+\item The function $f  : N-{\{1}\}\rightarrow N$; defined by $f(n)=$ the highest prime factor of n, is :
+\begin{enumerate}
+    \item both one-one and onto
+    \item one-one only
+    \item onto only
+    \item neither one-one nor onto
+\end{enumerate}
+  
+\item The least positive integral value of $\alpha$, for which the angle between the vectors $\alpha\hat{i}-2\hat{j}+2\hat{k}$ and $\alpha\hat{i}+2\alpha\hat{j}-2\hat{k}$ is acute, is \underline{\hspace{1cm}}\\
+
+\item Let for a differentiable function $f : \brak{0, \infty}\rightarrow R, f(x)-f(y)\geq ln\brak{\frac{x}{y}}+x-y,\forall x,y \in\brak{0,\infty}.$ Then $\sum_{n=1}^{20}f'\brak{\frac{1}{n^2}}$ is equal to \underline{\hspace{1cm}}\\
+
+\item If the solution of the differential equation $\brak{2x+3y-2}\text{dx}+\brak{4x+6y-7}\text{dy}=0$, $y(0)=3$, is $\alpha x+\beta y+3 ln\abs{2x+3y-\gamma}=6$, then $\alpha+2\beta+3\gamma$ is equal to \underline{\hspace{1cm}}\\
+
+\item Let the area of the region $\cbrak{\brak{x,y}: x-2y+4\geq 0,x+2y^2\geq 0,x+4y^2\leq 8,y\geq 0}$ be $\frac{m}{n}$, where $m$ and $n$ are coprime numbers. Then $m+n$ is equal to \underline{\hspace{1cm}}\\
+
+\item If $8=3+\frac{1}{4}\brak{3+p}+\frac{1}{4^2}\brak{3+2p}+\frac{1}{4^3}\brak{3+3p}+\cdots\infty,$ then the value of $p$ is \underline{\hspace{1cm}} \\
+
+\item A fair die is tossed repeatedly until a six is obtained. Let $X$ denote the number of tosses required and let $a=P\brak{X=3}, b=P\brak{X\geq 3}$ and $c=P\brak{X\geq 6 |X>3}$. Then $\frac{b+c}{a}$ is equal to \underline{\hspace{1cm}}\\
+
+\item Let the set of all $a\in \mathbb R$ such that the equation $\cos 2x+a\sin x=2a-7$ has a solution be ${[p,q]}$ and $r=\tan 9^{\circ}-\tan 27^{\circ}-\frac{1}{\cot 63^{\circ}}+\tan 81^{\circ}$, then $pqr$ is equal to \underline{\hspace{1cm}}\\
+
+\item Let $f(x)=x^3+x^2f'\brak{1}+xf''\brak{2}+f'''\brak{3}, x \in \mathbb R$. Then $f'\brak{10}$ is equal to \underline{\hspace{1cm}}\\
+
+\item Let $A=\myvec{2&0&1\\1&1&0\\1&0&1}, B=\myvec{B_1&B_2&B_3}$, where $B_1,B_2,B_3$ are column matrices, and $AB_1=\myvec{1\\0\\0}, AB_2=\myvec{2\\3\\0}, AB_3=\myvec{3\\2\\1}$. If $\alpha=\abs{B}$ and $\beta$ is the sum of all the diagonal elements $B$, then $\alpha ^3+\beta ^3$ is equal to  \underline{\hspace{1cm}}\\
+
+\item If $\alpha$ satisfies the equation $x^2+x+1=0$ and $\brak{1+\alpha}^7=A+B\alpha+C\alpha^{2}, A, B,C \geq 0$, then $5\brak{3A-2B-C}$ is equal to \underline{\hspace{1cm}}\\
+\end{enumerate}
+\end{document}
+
