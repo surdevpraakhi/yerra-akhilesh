@@ -1,0 +1,269 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2007-MA-1-17}
+\author{EE24BTECH11066 - YERRA AKHILESH
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item Consider $\mathbb R^2$ with the usual topology. Let $S=\cbrak{\brak{x,y} \in \mathbb R^2:  x \text{ is an integer}}$. Then $S$ is
+\begin{enumerate}
+    \item open but NOT closed
+    \item both open and closed
+    \item neither open nor closed
+    \item closed but NOT open
+\end{enumerate}
+
+\item Suppose  $X = \cbrak{\alpha, \beta, \delta}$. Let 
+\begin{align*}
+\mathscr{T}_1 = \cbrak{\phi, X, \cbrak{\alpha}, \cbrak{\alpha, \beta}} \text{and} \mathscr{T}_2 = \cbrak{\phi, X, \cbrak{\alpha}, \cbrak{\beta, \delta}}.
+\end{align*}
+Then 
+\begin{enumerate}
+    \item both $\mathscr{T}_1 \cap \mathscr{T}_2$ and $\mathscr{T}_1 \cup \mathscr{T}_2$ are topologies
+    \item neither $\mathscr{T}_1 \cap \mathscr{T}_2$ nor $\mathscr{T}_1 \cup \mathscr{T}_2$ is a topology
+    \item $\mathscr{T}_1 \cup \mathscr{T}_2$ is a topology but $\mathscr{T}_1 \cap \mathscr{T}_2$ is NOT a topology
+    \item $\mathscr{T}_1 \cap \mathscr{T}_2$ is a topology but $\mathscr{T}_1 \cap \mathscr{T}_2$ is NOT a topology
+\end{enumerate}
+
+\item For a positive integer $n$, let $f_n:\mathbb R \rightarrow \mathbb R$ be defined by 
+\begin{align*}
+f_n(x)= \begin{cases} 
+\frac{1}{4n+5}, & \text{if } 0 \leq x \leq n,\\
+0, & otherwise. \\
+\end{cases}
+\end{align*}
+Then $\cbrak{f_n(x)}$ converges to zero
+\begin{enumerate}
+    \item uniformly but NOT in $L^1$ norm
+    \item uniformly and also in $L^1$ norm
+    \item pointwise but NOT uniformly
+    \item in $L^1$ norm but NOT pointwise
+\end{enumerate}
+
+\item Let $P_1$ and $P_2$ be two projection operators on a vector space. Then 
+\begin{enumerate}
+    \item $P_1+P_2$ is a projection if $P_1 P_2=P_2 P_1=0$
+    \item $P_1-P_2$ is a projection if $P_1 P_2=P_2 P_1=0$
+    \item $P_1+P_2$ is a projection 
+    \item $P_1-P_2$ is a projection 
+\end{enumerate}
+
+\item Consider the system of linear equations 
+\begin{align*}
+    x+y+z=3\\
+    x-y-z=4\\
+    x-5y+kz=6
+\end{align*}
+Then the value of $k$ for which this system has an infinite number of solutions is 
+\begin{enumerate}
+\begin{multicols}{4}
+\item $k=-5$
+\item $k=0$
+\item $k=1$
+\item $k=3$
+\end{multicols}
+\end{enumerate}
+
+\item Let
+\begin{align*}
+    A=\myvec{1&1&1\\2&2&3\\x&y&z}
+\end{align*}
+and let $V=\cbrak{\brak{x,y,z}\in \mathbb R^3: det\brak{A}=0}$. Then the dimension of $V$ equals
+\begin{enumerate}
+\begin{multicols}{4}
+\item 0
+\item 1
+\item 2
+\item 3
+\end{multicols}
+\end{enumerate}
+
+\item Let $S=\cbrak{0} \cup \cbrak{\frac{1}{4n+7}: n=1,2,\dots}$. Then the number of analytic functions which vanish only on $S$ is
+\begin{enumerate}
+\begin{multicols}{4}
+\item infinite
+\item 0
+\item 1
+\item 2
+\end{multicols}
+\end{enumerate}
+
+\item It is given that $\sum_{n=0}^{\infty} a_n z^n$ converges at $z=3+i4$. Then the radius of convergence of the power series $\sum_{n=0}^{\infty} a_n z^n$ is
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\leq 5$
+\item $\geq 5$
+\item $<5$
+\item $>5$
+\end{multicols}
+\end{enumerate}
+
+\item The value of $\alpha$ for which $G=\cbrak{\alpha,1,3,9,19,27}$ is a cyclic group under multiplication modulo $56$ is
+\begin{enumerate}
+\begin{multicols}{4}
+\item 5
+\item 15
+\item 25
+\item 35
+\end{multicols}
+\end{enumerate}
+
+\item Consider $\mathbb Z_{24}$ as the additive group modulo $24$. Then the number of elements of order $8$ in the group $\mathbb Z_{24}$ is 
+\begin{enumerate}
+\begin{multicols}{4}
+\item 1
+\item 2
+\item 3
+\item 4
+\end{multicols}
+\end{enumerate}
+
+\item Define $f: \mathbb R^2 \rightarrow \mathbb R$ by
+\begin{align*}
+    f\brak{x,y}= \begin{cases} 
+1, & \text{if } xy=0,\\
+2, & otherwise. \\
+\end{cases}
+\end{align*}
+If $S=\cbrak{\brak{x,y}: \text{f is continuous at the point} \brak{x,y}}$, then
+\begin{enumerate}
+\begin{multicols}{2}
+\item $S$ is open
+\item $S$ is connected
+\item $S=\phi$
+\item $S$ is closed
+\end{multicols}
+\end{enumerate}
+
+\item Consider the linear programming problem, 
+\begin{align*}
+    Max. z=c_1 x_1 + c_2 x_2, c_1, c_2>0, \text{ subject to}
+\end{align*}
+\begin{align*}    
+    x_1+x_2 \leq 3\\
+    2x_1+3x_2 \leq 4\\
+    x_1,x_2 \geq 0.
+\end{align*}
+Then,
+\begin{enumerate}
+    \item the primal has an optimal solution but the dual does NOT have an optimal solution
+    \item both the primal and the dual have optimal solutions 
+    \item the dual has an optimal solution but the primal does NOT have an optimal solution
+    \item neither the primal nor the dual have optimal solutions
+\end{enumerate}
+
+\item Let $f(x)=x^{10}+x-1, x \in \mathbb R$ and let $x_k=k, k=0,1,2,\dots,10$. Then the value of the divided difference $f\sbrak{x_0,x_1,x_2,x_3,x_4,x_5,x_6,x_7,x_8,x_9,x_10}$ is
+\begin{enumerate}
+\begin{multicols}{4}
+\item -1
+\item 0
+\item 1
+\item 10
+\end{multicols}
+\end{enumerate}
+
+\item Let $X$ and $Y$ be jointly distributed random variables having the joint probability density function
+\begin{align*}
+    f\brak{x,y}= \begin{cases} 
+\frac{1}{\pi}, & \text{if } x^2+y^2 \leq 1,\\
+0, & otherwise. \\
+\end{cases}
+\end{align*}
+Then $P\brak{Y>max\brak{X,-X}}=$
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\frac{1}{2}$
+\item $\frac{1}{3}$
+\item $\frac{1}{4}$
+\item $\frac{1}{6}$
+\end{multicols}
+\end{enumerate}
+
+\item Let $X_1,X_2,\dots$ be a sequence of independent and identically distributed chi-square random variables, each having $4$ degrees of freedom. Define $S_n=\sum_{i=1}^{n}X_i ^2, n=1,2,\dots$. If $\frac{S_n}{n} \xrightarrow{P} \mu$, as $n \rightarrow \infty$, then $\mu=$
+\begin{enumerate}
+\begin{multicols}{4}
+\item 8
+\item 16
+\item 24
+\item 32
+\end{multicols}
+\end{enumerate}
+
+\item Let $\cbrak{E_n: n=1,2,\dots}$ be decreasing sequence of Lebesgue measurable sets on $\mathbb R$ and let $F$ be a Lebesgue measurable set on $\mathbb R$ such that $E_1\cap F=\mu$. Suppose that $F$ has Lebesgue measure $2$ and the Lebesgue measure of $E_n$ equals $\frac{2n+2}{3n+1}, n=1,2,\dots$ . Then the Lebesgue measure of the set $\brak{\cap_{n=1}^{\infty}E_n}\cup F$ equals
+\begin{enumerate}
+\begin{multicols}{4}
+\item $\frac{5}{3}$
+\item 2
+\item $\frac{7}{3}$
+\item $\frac{8}{3}$
+\end{multicols}
+\end{enumerate}
+
+\item The extremum for the variational problem 
+\begin{align*}
+    \int\limits_0^\frac{\pi}{8} \brak{\brak{y'}^2+2yy'-16y^2}\, \text{dx}, y(0)=0, y\brak{\frac{\pi}{8}}=1,
+\end{align*}
+occurs for the curve
+\begin{enumerate}
+\begin{multicols}{2}
+\item $y=\sin \brak{4x}$
+\item $y=\sqrt{2}\sin \brak{2x}$
+\item $y=1-\cos \brak{4x}$
+\item $y=\frac{1-\cos \brak{8x}}{2}$
+\end{multicols}
+\end{enumerate}
+\end{enumerate}
+\end{document}
