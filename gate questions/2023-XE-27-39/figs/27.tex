@@ -1,0 +1,34 @@
+\scalebox{0.75}{
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+% Draw main circle for the vortex
+\draw [line width=1.4pt] (12,11) circle (3.25cm);
+
+% Draw horizontal arrows (incoming flow U_infinity)
+\draw [->, >=Stealth] (4.75,11.5) -- (6.5,11.5);
+\draw [->, >=Stealth] (4.75,11) -- (6.5,11);
+\draw [->, >=Stealth] (4.75,10.5) -- (6.5,10.5);
+\draw [->, >=Stealth] (4.75,10) -- (6.5,10);
+\node [font=\normalsize] at (5.5,12) {$U_{\infty}$};
+
+% Draw axes and labels
+\draw [->, >=Stealth] (11.75,11) -- (11.75,12.5); % y-axis
+\draw [line width=0.5pt, ->, >=Stealth] (11.75,11) -- (13.5,11); % x-axis
+\draw [line width=0.6pt, ->, >=Stealth] (11.75,11) -- (12.75,12.5); % r-axis (polar)
+\draw [line width=0.6pt, ->, >=Stealth] (12.5,11) .. controls (12.75,11.5) and (12.5,11.5) .. (12.25,11.75); % theta angle
+
+% Labeling the axes
+\node [font=\large] at (11.75,13) {y}; % y-axis label
+\node [font=\large] at (13.75,11) {x}; % x-axis label
+\node [font=\large] at (13,12.75) {r}; % r-axis label
+\node [font=\large] at (12.75,11.5) {$\theta$}; % theta label
+
+% Title for the diagram
+\node [font=\large] at (12,14.75) {Clockwise vortex};
+
+% Clockwise rotation arrows at the top and bottom of the circle
+\draw [line width=0.6pt, ->, >=Stealth] (11.75,14.25) -- (12,14.25);
+\draw [line width=0.6pt, ->, >=Stealth] (12.25,7.75) -- (12,7.75);
+
+\end{circuitikz}
+}

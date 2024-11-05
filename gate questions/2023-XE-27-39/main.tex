@@ -1,0 +1,191 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{circuitikz}
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2023-XE-27-39}
+\author{EE24BTECH11066 - YERRA AKHILESH
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[start=27]
+\item An inviscid steady incompressible flow is formed by combining a uniform flow with velocity $U_{\infty}$ and a clockwise vortex of strength $K$ at the origin, as shown in the figure. Velocity potential $\brak{\phi}$ for the combined flow in polar coordinate $\brak{r, \theta}$ is 
+
+    \hfill{[2023-XE]}\\
+\begin{figure}[H]
+			\centering
+			\input{figs/27.tex}
+			\label{27}
+		\end{figure}
+\begin{enumerate}
+    \item $\phi = \frac{K \theta}{2 \pi}-U_{\infty}r \cos \theta$\\
+    \item $\phi = \frac{K \theta}{2 \pi}-U_{\infty}r \sin \theta$\\
+    \item $\phi = K \text{ ln } r + U_{\infty}r \cos \theta$\\
+    \item $\phi = -K \text{ ln } r + U_{\infty}r \sin \theta$\\
+\end{enumerate}
+%28
+\item Which of the following statements are true?\\
+$\brak{\text{i}}$ Conservation of mass for an unsteady incompressible flow can be represented as $\nabla \cdot \overset{\rightarrow}{V}=0$, where $\overset{\rightarrow}{V}$ denotes velocity vector.\\
+$\brak{\text{ii}}$ Circulation is defined as the line integral of vorticity about a closed curve.\\
+$\brak{\text{iii}}$ For some fluids, shear stress can be a non-linear function of the shear strain rate.\\
+$\brak{\text{iv}}$ Integration of the Bernoulli's equation along a streamline under steady-state leads to the Euler's equation.\hfill{[2023-XE]}\\
+\begin{enumerate}
+    \item $\brak{\text{i}},\brak{\text{ii}} \text{and} \brak{\text{iv}}$ only
+    \item $\brak{\text{i}}, $\brak{\text{ii}} \text{and} $\brak{\text{iii}}$ only
+    \item $\brak{\text{i}} \text{and} \brak{\text{iii}}$ only
+    \item $\brak{\text{ii}} \text{and} \brak{\text{iv}}$ only
+\end{enumerate}
+%29
+\item For a two-dimensional flow field given as $\overset{\rightarrow}{V}=-x \hat{i} + y \hat{j}$, a streamline passes through points $\brak{2,1}$ and $\brak{5,p}$. The value of $p$ is \hfill{[2023-XE]}\\
+\begin{enumerate}
+    \item 5\\
+    \item $\frac{5}{2}$\\
+    \item $\frac{2}{5}$\\
+    \item 2
+\end{enumerate}
+%30
+\item A stationary object is fully submerged in a static fluid, as shown in the figure. Here, $CG$ and $CB$ stand for center of gravity and center of buoyancy, respectively. Which one$\brak{\text{s}}$ among the following statements is/are true?\hfill{[2023-XE]}\\
+\begin{figure}[H]
+			\centering
+			\input{figs/30.tex}
+			\label{30}
+		\end{figure}
+\begin{enumerate}
+    \item The object is in stable equilibrium if $y_{CG}>y_{CB}$.\\
+    \item The object is in stable equilibrium if $y_{CG}<y_{CB}$.\\
+    \item The object is in neutral equilibrium if $y_{CG}=y_{CB}$.\\
+    \item The object is in unstable equilibrium if $y_{CG}=y_{CB}$.\\
+\end{enumerate}
+%31
+\item Consider steady fully-developed incompressible flow of a Newtonian fluid between two infinite parallel flat plates. The plates move in the opposite directions, as shown in the figure. In the absence of body force and pressure gradient, the ratio of shear stress at the top surface $\brak{\text{y=H}}$ to that at the bottom surface $\brak{y=0}$ is \hfill{[2023-XE]}\\
+\begin{figure}[H]
+			\centering
+			\input{figs/31.tex}
+			\label{31}
+		\end{figure}
+\begin{enumerate}
+    \item 1\\
+    \item $\frac{U_1}{U_2}$\\
+    \item $\frac{U_1 - U_2}{U_2}$\\
+    \item $\frac{U_1 + U_2}{U_2}$\\
+\end{enumerate}  
+%32
+\item A two-dimensional incompressible flow field is defined as, \\
+\begin{align*}
+    \overset{\rightarrow}{V} \brak{x,y} = \brak{Axy} \hat{i} + \brak{By^2} \hat{j}
+\end{align*}
+where, $A$ and $B$ are constants. The dynamic viscosity of the Newtonian fluid is $\mu$. In the absence of body force, which among the following expressions represents the pressure gradient at the location $\brak{5,0}$ in the concerned flow field? \hfill{[2023-XE]}\\
+\begin{enumerate}
+    \item $\mu A \brak{5 \hat{i}+\hat{j}}$\\
+    \item $\mu \brak{-5B \hat{i}+\hat{j}}$\\
+    \item $\mu A \brak{-\hat{j}}$\\
+    \item $\mu A \brak{5 \hat{i}}$
+\end{enumerate}
+%33
+\item For a potential flow, the fluid velocity is given by $\overset{\rightarrow}{V} \brak{x,y}=u \hat{i}+v \hat{j}$. The slope of the potential line at $\brak{x,y}$ is \hfill{[2023-XE]}\\
+\begin{enumerate}
+    \item $\frac{u}{v}$\\
+    \item $\frac{v}{u}$\\
+    \item $-\frac{u}{v}$\\
+    \item $-\frac{v}{u}$\\
+\end{enumerate}
+%34
+\item Consider steady incompressible flow of a Newtonian fluid over a horizontal flat plate, as shown in the figure. The boundary layer thickness is proportional to 
+
+    \hfill{[2023-XE]}\\
+%figure
+\begin{figure}[H]
+			\centering
+			\input{figs/34.tex}
+			\label{34}
+		\end{figure}
+\begin{enumerate}
+    \item $x^ \frac{1}{4}$\\
+    \item $x^ \frac{1}{2}$\\
+    \item $x^ \frac{-1}{2}$\\
+    \item $x^2$\\
+\end{enumerate}
+%35
+\item In a steady two-dimensional compressible flow, $u$ and $v$ are the $x-$ and $y-$ components of flow velocity, respectively and $\rho$ is the fluid density. Among the following pairs of relations, which one$\brak{\text{s}}$ perfectly satisfies/satisfy the definition of stream function, $\psi$, for this flow? \hfill{[2023-XE]}\\
+\begin{enumerate}
+    \item $u=\frac{\partial \psi}{\partial y}$ and $v=- \frac{\partial \psi}{\partial x}$\\
+    \item $u=-\frac{\partial \psi}{\partial x}$ and $v=- \frac{\partial \psi}{\partial x}$\\
+    \item $\rho u=\frac{\partial \psi}{\partial y}$ and $\rho v=- \frac{\partial \psi}{\partial x}$\\
+    \item $\rho u=-\frac{\partial \psi}{\partial y}$ and $\rho v=\frac{\partial \psi}{\partial x}$\\
+\end{enumerate}
+%36
+\item A water jet $\brak{\text{density} = 1000 \frac{kg}{m^3})}$ is approaching a vertical plate, having an orifice at the center, as shown in the figure. While a part of the jet passes through the orifice, the remainder flows along the plate. Neglect friction and assume both the inlet and exit jets to have circular cross-sections. If $V = 5 \frac{m}{s}, D = 100 mm$, and $d = 25 mm$, the magnitude of the horizontal force $\brak{\text{in N, rounded off to one decimal place}}$ required to hold the plate in its position is \underline{\hspace{1cm}}. \hfill{[2023-XE]}\\
+%diagram
+\begin{figure}[H]
+			\centering
+			\input{figs/36.tex}
+			\label{36}
+		\end{figure}
+%37
+\item Water $\brak{\text{density} = 1000 \frac{kg}{m^3}}$ and alcohol $\brak{\text{specific gravity} = 0.7}$ enter a Y-shaped channel at flow rates of $0.2 \frac{m^3}{s}$ and $0.3 \frac{m^3}{s}$, respectively. Their mixture leaves through the other end of the channel, as shown in the figure. The average density (in $\brak{\text{in} \frac{kg}{m^3}}$ of the mixture is \underline{\hspace{1cm}}. \hfill{[2023-XE]}\\
+%diagram
+\begin{figure}[H]
+			\centering
+			\input{figs/37.tex}
+			\label{37}
+		\end{figure}
+
+%38
+\item The velocity and acceleration of a fluid particle are given as $\overset{\rightarrow}{V}=\brak{-\hat{i}+2\hat{j}} \frac{m}{s}$ and $\overset{\rightarrow}{a}=\brak{-2\hat{i}-4 \hat{j}} \frac{m}{s^2}$, respectively. The magitude of the component of acceleration $\brak{\text{in } \frac{m}{s^2}, \text{rounded off to two decimal places}}$ of the fluid particle along the streamline is \underline{\hspace{1cm}}. \hfill{[2023-XE]}\\
+%39
+\item A hydraulic turbine with rotor diameter of $100 mm$ produces $200 W$ of power while rotating at $300\text{ rpm}$. Another dynamically-similar turbine rotates at a speed of $1500 \text{rpm}$. Consider both turbines to operate with the same fluid $\brak{\text{identical density and viscosity}}$, and neglect any gravitational effect. Then the power $\brak{\text{in W, rounded off to nearest integer}}$ produced by the second turbine is \underline{\hspace{1cm}}. \hfill{[2023-XE]}\\
+
+\end{enumerate}
+\end{document}
