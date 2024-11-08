@@ -1,0 +1,63 @@
+\scalebox{0.5}{
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw [ fill={rgb,255:red,61; green,56; blue,70} , rounded corners = 42.0] (4,15.75) rectangle (8,6.5);
+\draw [short] (5.75,6.5) -- (5.75,4.25);
+\draw [short] (6.5,6.5) -- (6.5,5);
+\draw [short] (6.5,5) -- (10,5);
+\draw [short] (5.75,4.25) -- (10,4.25);
+\draw [short] (10,5) -- (10,14.75);
+\draw [short] (10,4.25) -- (10.75,4.25);
+\draw [short] (10.75,4.25) -- (10.75,14);
+\draw [short] (10,14.75) -- (13.75,14.75);
+\draw [short] (10.75,14) -- (13,14);
+\draw [short] (13,14) -- (13,4.5);
+\draw [short] (13.75,14.75) -- (13.75,5.25);
+\draw [short] (13,4.5) -- (16.75,4.5);
+\draw [short] (13.75,5.25) -- (16,5.25);
+\draw [short] (16,5.25) -- (16,17.75);
+\draw [short] (16.75,4.5) -- (16.75,17.75);
+\draw [ fill={rgb,255:red,61; green,56; blue,70} ] (5.75,6.5) rectangle (6.5,4.25);
+\draw [ fill={rgb,255:red,61; green,56; blue,70} ] (5.75,5) rectangle (10.75,4.25);
+\draw [ fill={rgb,255:red,61; green,56; blue,70} ] (10,4.25) rectangle (10.75,14.75);
+\draw [ fill={rgb,255:red,61; green,56; blue,70} ] (10,14.75) rectangle (13.75,14);
+\draw [ fill={rgb,255:red,61; green,56; blue,70} ] (13,14.75) rectangle (13.75,13.25);
+\draw [ color={rgb,255:red,192; green,191; blue,188} , fill={rgb,255:red,192; green,191; blue,188}] (13,13.25) rectangle (13.75,4.5);
+\draw [ color={rgb,255:red,192; green,191; blue,188} , fill={rgb,255:red,192; green,191; blue,188}] (13,5.25) rectangle (16.75,4.5);
+\draw [ color={rgb,255:red,192; green,191; blue,188} , fill={rgb,255:red,192; green,191; blue,188}] (16,4.5) rectangle (16.75,15.75);
+\draw [ fill={rgb,255:red,61; green,56; blue,70} ] (4,15.75) rectangle (8,7.75);
+\draw [dashed] (8,13.25) -- (13,13.25);
+\draw [dashed] (16.75,13.25) -- (17.75,13.25);
+\draw [dashed] (16.75,15.75) -- (18,15.75);
+\draw [dashed] (18,15.75) -- (17.75,15.75);
+\draw [dashed] (1.25,15.75) -- (2.25,15.75);
+\draw [dashed] (1.25,13.25) -- (2.25,13.25);
+\draw  (3,13.25) circle (0.5cm);
+\draw [short] (3.5,13.5) -- (4,13.5);
+\draw [short] (3.5,13) .. controls (3.75,13) and (3.75,13) .. (4,13);
+\draw [->, >=Stealth] (3,13.25) -- (2.75,13.5);
+\draw [ color={rgb,255:red,246; green,245; blue,244}, ->, >=Stealth] (2.75,10.25) -- (5,10.25);
+\draw [short] (2.75,10.25) -- (4,10.25);
+\draw [->, >=Stealth] (17.75,9.25) -- (16.25,9.25);
+\draw [->, >=Stealth] (17,14.5) -- (17,15.5);
+\draw [->, >=Stealth] (17,14.5) -- (17,13.5);
+\draw [->, >=Stealth] (16.5,17.5) -- (16.5,18.5);
+\draw [->, >=Stealth] (11.5,18) -- (11.5,16.25);
+\draw [->, >=Stealth] (1.75,14.5) -- (1.75,15.5);
+\draw [->, >=Stealth] (1.75,14.75) -- (1.75,13.5);
+\draw [->, >=Stealth] (3.25,16.75) -- (5.5,16.75);
+\node [font=\Large] at (2,16.75) {Vapour};
+\node [font=\large] at (1.75,10.25) {Volatile};
+\node [font=\large] at (12,16.25) {g};
+\node [font=\large] at (16.5,19.25) {Open to };
+\node [font=\large] at (17.25,14.5) {h};
+\node [font=\large] at (19,9.25) {Mercury};
+\node [font=\large] at (1.75,9.75) {liquid};
+\node [font=\large, rotate around={90:(0,0)}] at (0.5,14.75) {};
+\node [font=\large, rotate around={90:(0,0)}] at (1.25,14.5) {1 m};
+\draw (5,17.25) to[short] (7,17.25);
+\draw [short] (4,15.75) .. controls (4.25,16.75) and (4.25,17) .. (5,17.25);
+\draw [short] (7,17.25) .. controls (8,17) and (7.75,16.75) .. (8,15.75);
+\node [font=\large] at (17.75,18.75) {atmosphere};
+\end{circuitikz}
+}

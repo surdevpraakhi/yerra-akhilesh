@@ -1,0 +1,182 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Uncomment if needed for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+%\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{standalone} % For including external TikZ files
+
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{2024-XE-27-39}
+\author{EE24BTECH11066 - YERRA AKHILESH}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\setlength{\intextsep}{10pt} % Space between text and floats
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}[start=27]
+%27
+\item The hydraulic diameter for a circular pipe of radius $R$ is \hfill{[2024-XE]}\\
+\begin{enumerate}
+    \item $0.5R$\\
+    \item $R$\\
+    \item $2R$\\
+    \item $4R$\\
+\end{enumerate}
+
+%28
+\item For incompressible, laminar, fully-developed flow through a circular pipe, Darcy friction factor and Fanning friction factor are represented as $f$ and $C_{f}$, respectively. Which one of the following options is correct? \hfill{[2024-XE]}\\
+\begin{enumerate}
+    \item $f=0.25 C_{f}$\\
+    \item $f=0.5 C_{f}$\\
+    \item $f=2 C_{f}$\\
+    \item $f=4 C_{f}$\\
+\end{enumerate}
+
+%29
+\item For an immersed neutrally buoyant body to be in stable equilibrium, the center of gravity of the body is directly \hfill{[2024-XE]}\\
+\begin{enumerate}
+    \item above the metacenter.\\
+    \item below the metacenter.\\
+    \item above the center of buoyancy.\\
+    \item below the center of buoyancy.\\
+\end{enumerate}
+
+%30
+\item The absolute pressure in a chamber is measured as $400 \, \text{mm Hg}$ at a location where the atmospheric pressure is $700 \, \text{mm Hg}$. A vacuum gauge connected to the chamber reads \underline{\hspace{1cm}} $\text{mm Hg}$ $\brak{\text{answer in integer}}$ \hfill{[2024-XE]}\\
+
+%31
+\item A thin film of incompressible, Newtonian liquid $\brak{\text{density } \rho, \text{ viscosity } \mu}$ with an uniform thickness $\brak{\text{h}}$ is flowing down on a vertical plate. The flow is driven by gravity $\brak{\text{g}}$ alone. Assume zero shear stress condition at the free surface. \hfill{[2024-XE]}\\
+
+\begin{figure}[H]
+    \centering
+    \input{figs/31.tex}
+    \label{31}
+\end{figure}
+
+The maximum velocity is given by\\
+\begin{enumerate}
+    \item $\frac{1}{2\mu}\rho g h^2$\\
+    \item $\frac{1}{4\mu}\rho g h^2$\\
+    \item $\frac{1}{\mu}\rho g h^2$\\
+    \item $\frac{1}{8\mu}\rho g h^2$\\
+\end{enumerate}
+
+%32
+\item A one-eighth scale model of a car is to be tested in a wind tunnel. If the air velocity over the car is $16 \frac{m}{s}$, what should be the air velocity $\brak{\text{in} \frac{m}{s}}$ in the wind tunnel in order to achieve similarity between the model and the prototype? \hfill{[2024-XE]}\\
+\begin{enumerate}
+    \item 2\\
+    \item 16\\
+    \item 64\\
+    \item 128\\
+\end{enumerate}
+
+%33
+\item A set of basic dimensions, mass, length, and time are represented by $M, L$, and $T$ respectively. What will be the dimensions of pressure in $M-L-T$ system? \hfill{[2024-XE]}\\
+\begin{enumerate}
+    \item $ML^{-1}T^{-2}$\\
+    \item $MLT^{-2}$\\
+    \item $MLT^{-1}$\\
+    \item $ML^{-1}T^{-1}$\\
+\end{enumerate}
+
+%34
+\item Consider a fluid flow around an airfoil as shown in figure.
+\begin{figure}[H]
+    \centering
+    \input{figs/34.tex}
+    \label{34}
+\end{figure}
+The directions of drag force and lift force, respectively are along \hfill{[2024-XE]}\\
+\begin{enumerate}
+    \item $OA$ and $OC$\\
+    \item $OA$ and $OD$\\
+    \item $OB$ and $OC$\\
+    \item $OB$ and $OD$\\
+\end{enumerate}
+
+%35
+\item A vessel which contains a volatile liquid and its vapor is connected with a mercury manometer as shown in figure. Both the liquid and vapor phases are at equilibrium. The vapor pressure and density of the volatile liquid are $107.6 \text{kPa}$ and $700 \frac{kg}{m^3}$, respectively. The density of the mercury is $13600 \frac{kg}{m^3}$. Acceleration due to gravity $\brak{g}$ is $10 \frac{m}{s^2}$ and atmospheric pressure is $101 \text{kPa}$. Hydrostatic pressure created by the weight of the vapor is neglected.
+
+\begin{figure}[H]
+    \centering
+    \input{figs/35.tex}
+    \label{35}
+\end{figure}
+
+The height, $h$, $\brak{\text{in m, rounded off to two decimal places}}$ of the mercury column in figure is \underline{\hspace{1cm}}. \hfill{[2024-XE]}\\
+
+%36
+\item The velocity in a one-dimensional flow is given by $u \brak{x} = \frac{a}{\brak{b-x}^2} \frac{m}{s}$, where $a=8 \frac{m}{s^2}$ and $b=4 m$. The acceleration $\brak{\text{in} \frac{m}{s^2}, \text{ answer in integer}}$ at $x=2 m$ is \underline{\hspace{1cm}}.\hfill{[2024-XE]}\\
+
+%37
+\item Consider two parallel plates separated by a distance of $1 cm$ filled with a Newtonian fluid of viscosity $10^{-3} \text{Pa.s}$. The top plate is moving with a velocity of $1 \frac{m}{s}$ whereas the bottom plate is stationary. The shear stress $\brak{\text{in Pa, rounded off to one decimal}}$ on the top plate is \underline{\hspace{1cm}}.\hfill{[2024-XE]}\\
+
+%38
+\item A circular water jet of diameter $50 mm$ impinges with a velocity of $18 \frac{m}{s}$ normal to a plate. The density of water is $1000 \frac{m^3}{s}$ and gravity force is neglected.
+\begin{figure}[H]
+    \centering
+    \input{figs/38.tex}
+    \label{38}
+\end{figure}
+The magnitude of net force $\brak{\text{in N, rounded off to two decimal places}}$ imparted by the jet on the stationary plate is \underline{\hspace{1cm}}. \hfill{[2024-XE]}\\
+
+%39
+\item Consider the steady, incompressible flow of water in a horizontal pipe of constant diameter $1 m$ with an inlet velocity of $12 \frac{m}{s}$.
+\begin{figure}[H]
+    \centering
+    \input{figs/39.tex}
+    \label{39}
+\end{figure}
+As shown in the figure, water is lost through a circular hole of diameter $0.6  \text{m}$ at the rate of $4.53 \frac{m^3}{s}$. The outlet velocity $\brak{\text{in } \frac{m}{s} \text{, rounded off to two decimal places}}$ of water in the pipe is \underline{\hspace{1cm}}. \hfill{[2024-XE]}\\
+
+\end{enumerate}
+
+\end{document}
+
