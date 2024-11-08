@@ -1,0 +1,19 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+% Resistor
+\draw [ line width=1.5pt] (5,15) to[R,l={ \LARGE 1 K$\Omega$}] (5,21);
+% Diodes
+\draw [ line width=1.1pt] (5,15) to[D] (9.5,15);
+\draw [ line width=1.1pt] (9.25,15) to[D] (12,15);
+\draw [ line width=1.1pt] (12,15) to[D] (15.75,15);
+% Ground connection
+\draw [line width=1.1pt](15.75,15) -- (15.75,13) node[ground]{};
+% Connection from the resistor to a point
+\draw [line width=1.1pt, short] (4.5,21) -- (5.5,21);
+% Arrow for current direction
+\draw [line width=1.1pt, ->, >=Stealth] (5,17) -- (5,15.75);
+% Label for current I without a line
+\node[fill=white] at (4.5, 15.5) {I};
+% Label for voltage +10.1V without a line
+\node[fill=white] at (6.75, 21) {+10.1V};
+\end{circuitikz}

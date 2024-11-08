@@ -1,0 +1,14 @@
+
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (5.75,14.75) ellipse (1cm and 2cm);
+\draw [short] (5.75,16.75) -- (11,16.75);
+\draw [short] (5.75,12.75) -- (11.5,12.75);
+\draw [short] (11,16.75) -- (11.5,16.75);
+\draw [short] (11.5,16.75) .. controls (12.75,15) and (12.5,14.25) .. (11.5,12.75);
+\draw [->, >=Stealth] (2.75,16.25) -- (5.5,15.25)node[pos=0,below, fill=white]{q};
+\draw [short] (5.5,15.25) -- (6,15);
+\draw [dashed] (6,15) -- (12.5,12.75);
+\node at (2.75,16.25) [circ] {};
+\node at (2.75,16.25) [circ] {};
+\end{circuitikz}
